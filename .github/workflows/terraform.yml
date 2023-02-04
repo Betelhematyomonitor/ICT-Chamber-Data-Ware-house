@@ -14,20 +14,20 @@ jobs:
         runs-on: ubuntu-latest
       
       steps:
-      -name : Checkout
-       uses : actions/checkout@v2
+      - name : Checkout
+        uses : actions/checkout@v2
       
-       -name : Setup Terraform
-       uses :  hashicorp/setup-terraform@v1
+      - name : Setup Terraform
+        uses :  hashicorp/setup-terraform@v1
 
-       -name : Get GCP service account from github secrets
+      - name : Get GCP service account from github secrets
         run  : 'echo "$GCP_KEY" > credentials.json'
         env  :
            GCP_KEY : ${{secrets.GCP_key}}
       
-      -name  : Terraform init
-       run   : terraform init -reconfigure -backend-config=gcs_bucket_backend_config
+      - name  : Terraform init
+        run   : terraform init -reconfigure -backend-config=gcs_bucket_backend_config
       
-      -name  : Terraform apply
-       run : terraform apply -input = false -auto-approve
+      - name  : Terraform apply
+        run : terraform apply -input = false -auto-approve
 
