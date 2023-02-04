@@ -1,2 +1,2 @@
-bucket = "ict_chamber_terraform_backend"
+bucket = "tf_state_ict"
 credentials = "credentials.json"
