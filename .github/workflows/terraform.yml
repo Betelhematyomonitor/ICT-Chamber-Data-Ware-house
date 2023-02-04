@@ -28,5 +28,5 @@ jobs:
         run   : terraform init -reconfigure -backend-config=gcs_backend_terraform_config
       
       - name  : Terraform apply
-        run : terraform apply -input = false -auto-approve
+        run : terraform apply -input=false -auto-approve
 
