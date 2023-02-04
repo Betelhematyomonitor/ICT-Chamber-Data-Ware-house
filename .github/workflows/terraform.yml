@@ -9,8 +9,8 @@ on:
 
 jobs:
     terraform-apply:
-        name: "Terraform apply job"
-        runs-on: ubuntu-latest
+      name: "Terraform apply job"
+      runs-on: ubuntu-latest
       
       steps:
       - name : Checkout
