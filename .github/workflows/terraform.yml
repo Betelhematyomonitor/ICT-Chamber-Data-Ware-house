@@ -9,7 +9,7 @@ on:
 
 
 jobs:
-      terraform-apply:
+    terraform-apply:
         name: "Terraform apply job"
         runs-on: ubuntu-latest
       
