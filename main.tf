@@ -7,6 +7,6 @@ provider "google" {
 }
 terraform {
    backend "gcs"{
-    
+         bucket = "ict_chamber_terraform_backend"
    }
 }
