@@ -1,5 +1,5 @@
 provider "google" {
-     credentials = "/credential.json"
+     credentials = "credential.json"
      project =  "data-warehouse-dev-376508"
      region =  "us-east1 (South Carolina)"
 }
